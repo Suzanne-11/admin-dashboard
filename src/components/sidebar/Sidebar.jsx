@@ -13,13 +13,17 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CategoryIcon from '@mui/icons-material/Category';
 import { Dashboard } from '@mui/icons-material';
+import {Link} from "react-router-dom";
 
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
+          <Link to="/" style={{textDecoration:"none"}}>
             <span className="logo">AdminD</span>
+          </Link>
+            
         </div>
         <hr />
         <div className="center">
@@ -30,14 +34,20 @@ const Sidebar = () => {
                   <span>Dashboard</span>
                 </li>
                 <p className="title">LISTS</p>
-                <li>
-                  <PersonIcon className='icon' />
-                  <span>Users</span>
-                </li>
-                <li>
-                  <CategoryIcon className='icon' />
-                  <span>Products</span>
-                </li>
+                <Link to="/users" style={{textDecoration:"none"}}>
+                  <li>
+                    <PersonIcon className='icon' />
+                    <span>Users</span>
+                  </li>
+                </Link>
+
+                <Link to="/products" style={{textDecoration:"none"}}>
+                  <li>
+                    <CategoryIcon className='icon' />
+                    <span>Products</span>
+                  </li>
+                </Link>
+                
                 <li>
                   <ShoppingCartIcon className='icon' />
                   <span>Orders</span>
