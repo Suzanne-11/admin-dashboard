@@ -5,6 +5,10 @@ import Navbar from '../../components/navbar/Navbar';
 import Chart from '../../components/chart/Chart';
 import List from '../../components/table/Table';
 
+{/* Single Page for User - will show user info + img on left; user chart on right and user last transactions list on the bottom  
+
+users/123
+*/}
 const single = () => {
   return (
     <div className='single'>
